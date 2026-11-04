@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1600" height="900" fill="#f7f5f0"/>
+  <text x="80" y="92" font-size="52" font-weight="700" fill="#16181d">Levels 3 to 6: harness, loop, DAG, graph</text>
+  <text x="80" y="140" font-size="28" fill="#555">Not rival ideas. Each level wraps the one below it.</text>
+
+  <!-- GRAPH layer: planning band -->
+  <rect x="80" y="190" width="1440" height="640" rx="28" fill="#eef1fb" stroke="#4a63d6" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="112" y="236" font-size="30" font-weight="700" fill="#4a63d6">GRAPH</text>
+  <text x="230" y="236" font-size="24" fill="#33427f">plan the shape: which arrows are real, what runs side by side, is it worth it</text>
+
+  <!-- DAG layer -->
+  <rect x="120" y="270" width="1360" height="520" rx="22" fill="#fff8ec" stroke="#d98a1c" stroke-width="3"/>
+  <text x="152" y="314" font-size="30" font-weight="700" fill="#b26b07">DAG</text>
+  <text x="238" y="314" font-size="24" fill="#7a5410">fixed steps, files hand off, resume after a crash, a person approves what goes out</text>
+
+  <!-- three agent boxes (harness) -->
+  <g font-size="22">
+    <!-- agent 1 -->
+    <rect x="170" y="360" width="340" height="300" rx="18" fill="#ffffff" stroke="#16181d" stroke-width="3"/>
+    <text x="196" y="400" font-size="26" font-weight="700" fill="#16181d">HARNESS</text>
+    <text x="196" y="430" fill="#555">tools, permissions, memory,</text>
+    <text x="196" y="456" fill="#555">sub agents, hooks</text>
+    <circle cx="340" cy="560" r="62" fill="#e9f7ef" stroke="#1f9d55" stroke-width="3"/>
+    <text x="340" y="552" text-anchor="middle" font-weight="700" fill="#1f9d55">LOOP</text>
+    <text x="340" y="580" text-anchor="middle" font-size="18" fill="#1f6b3d">ask, act, look</text>
+    <rect x="300" y="482" width="80" height="34" rx="8" fill="#16181d"/>
+    <text x="340" y="505" text-anchor="middle" font-size="18" fill="#fff">model</text>
+    <!-- agent 2 & 3 in parallel -->
+    <rect x="640" y="360" width="300" height="140" rx="18" fill="#ffffff" stroke="#16181d" stroke-width="3"/>
+    <text x="666" y="400" font-size="24" font-weight="700" fill="#16181d">HARNESS</text>
+    <text x="666" y="432" fill="#555">model + loop</text>
+    <text x="666" y="470" font-size="19" fill="#4a63d6">runs in parallel</text>
+    <rect x="640" y="520" width="300" height="140" rx="18" fill="#ffffff" stroke="#16181d" stroke-width="3"/>
+    <text x="666" y="560" font-size="24" font-weight="700" fill="#16181d">HARNESS</text>
+    <text x="666" y="592" fill="#555">model + loop</text>
+    <text x="666" y="630" font-size="19" fill="#4a63d6">runs in parallel</text>
+    <!-- gate -->
+    <rect x="1070" y="440" width="170" height="140" rx="18" fill="#fff" stroke="#d98a1c" stroke-width="3"/>
+    <text x="1155" y="500" text-anchor="middle" font-size="24" font-weight="700" fill="#b26b07">GATE</text>
+    <text x="1155" y="530" text-anchor="middle" font-size="18" fill="#7a5410">person approves</text>
+    <text x="1155" y="554" text-anchor="middle" font-size="18" fill="#7a5410">this exact file</text>
+    <text x="1320" y="518" font-size="24" font-weight="700" fill="#16181d">ship</text>
+  </g>
+  <g stroke="#16181d" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M510 470 C 570 470, 580 430, 636 430"/>
+    <path d="M510 550 C 570 550, 580 590, 636 590"/>
+    <path d="M940 430 C 1000 430, 1010 490, 1066 500"/>
+    <path d="M940 590 C 1000 590, 1010 530, 1066 520"/>
+    <path d="M1240 510 L 1310 510"/>
+  </g>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#16181d"/></marker></defs>
+  <!-- outer loop arrow -->
+  <path d="M260 668 C 260 740, 420 740, 420 668" stroke="#1f9d55" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <text x="440" y="735" font-size="20" fill="#1f6b3d">outer loop: rerun until the test passes</text>
+
+  <text x="80" y="872" font-size="22" fill="#555">agent = model + harness  ·  speedup S = 1 / ((1 - p) + p / N)  ·  github.com/wilsonwu-ai/harness-loop-dag-graph</text>
+</svg>
